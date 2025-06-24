@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amoury Media Agency</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo for a modern Arabic look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #010101; /* TikTok Black */
+        }
+        /* TikTok-inspired colors */
+        .tiktok-pink { color: #FE2C55; }
+        .tiktok-cyan { color: #25F4EE; }
+        .bg-tiktok-pink { background-color: #FE2C55; }
+        .bg-tiktok-cyan { background-color: #25F4EE; }
+
+        /* Gradient Text for Hero */
+        .hero-gradient-text {
+            background: linear-gradient(to right, #FE2C55, #25F4EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        /* Simple animation for elements fading in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* Card hover effect */
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(37, 244, 238, 0.1), 0 10px 10px -5px rgba(37, 244, 238, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-black/80 backdrop-blur-sm shadow-lg shadow-gray-900/50 sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Amoury <span class="tiktok-cyan">Media</span> Agency</h1>
+            <div class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#hero" class="hover:tiktok-cyan transition duration-300">الرئيسية</a>
+                <a href="#services" class="hover:tiktok-cyan transition duration-300">خدماتنا</a>
+                <a href="#offers" class="hover:tiktok-cyan transition duration-300">أبرز العروض</a>
+                <a href="#about" class="hover:tiktok-cyan transition duration-300">من نحن</a>
+                <a href="#contact" class="hover:tiktok-cyan transition duration-300">تواصل معنا</a>
+            </div>
+            <button class="md:hidden text-gray-200 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-gray-900" id="mobile-menu">
+            <a href="#hero" class="block py-2 px-4 text-sm hover:bg-gray-800">الرئيسية</a>
+            <a href="#services" class="block py-2 px-4 text-sm hover:bg-gray-800">خدماتنا</a>
+            <a href="#offers" class="block py-2 px-4 text-sm hover:bg-gray-800">أبرز العروض</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-800">من نحن</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-800">تواصل معنا</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden">
+             <div class="absolute -right-20 -top-20 w-80 h-80 bg-tiktok-pink rounded-full filter blur-3xl opacity-20"></div>
+            <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-tiktok-cyan rounded-full filter blur-3xl opacity-20"></div>
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-20 fade-in">
+                <h2 class="text-4xl md:text-6xl font-extrabold hero-gradient-text leading-tight mb-4">وكالتك الإعلامية الرائدة</h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">نحن نختص في إدارة حسابات التواصل الاجتماعي، تسهيل معاملاتك المالية، وشحن الألعاب والتطبيقات.</p>
+                <a href="#contact" class="bg-tiktok-pink text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-tiktok-pink transition duration-300 transform hover:scale-105 shadow-lg shadow-rose-500/30">ابدأ معنا اليوم</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-3">خدماتنا الأساسية</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">حلول متكاملة لدعم وتنمية حضورك الرقمي في كل خطوة.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1: Social Media -->
+                    <div class="card-hover bg-gray-900/50 p-6 rounded-lg border border-gray-800 transition-all duration-300 fade-in flex flex-col" style="animation-delay: 0.2s;">
+                        <img src="image/ads.jpeg" alt="خدمات التواصل الاجتماعي" class="rounded-md mb-6 w-full h-48 object-cover">
+                        <h4 class="text-xl font-bold mb-3 tiktok-pink">إعلانات TikTok</h4>
+                        <p class="text-gray-400 flex-grow">حملات إعلانية احترافية بنتائج خيالية لزيادة مبيعاتك بأقل تكلفة.</p>
+                    </div>
+                    <!-- Service 2: Profit Withdrawal -->
+                    <div class="card-hover bg-gray-900/50 p-6 rounded-lg border border-gray-800 transition-all duration-300 fade-in flex flex-col" style="animation-delay: 0.4s;">
+                         <img src="image/sa7eb.jpeg" alt="سحب الأرباح" class="rounded-md mb-6 w-full h-48 object-cover">
+                        <h4 class="text-xl font-bold mb-3 tiktok-cyan">سحب الأرباح</h4>
+                        <p class="text-gray-400 flex-grow">نسهل عليك سحب أرباح TikTok بأفضل نسبة في لبنان بسرعة وأمان.</p>
+                    </div>
+                    <!-- Service 3: Charging Apps & Games -->
+                    <div class="card-hover bg-gray-900/50 p-6 rounded-lg border border-gray-800 transition-all duration-300 fade-in flex flex-col" style="animation-delay: 0.6s;">
+                         <img src="image/coin.jpeg" alt="شحن عملات تيك توك" class="rounded-md mb-6 w-full h-48 object-cover">
+                        <h4 class="text-xl font-bold mb-3 text-white">شحن التطبيقات والألعاب</h4>
+                        <p class="text-gray-400 flex-grow">نوفر خدمات شحن سريعة وموثوقة لجميع تطبيقاتك وألعابك المفضلة.</p>
+                    </div>
+                    <!-- Service 4: USDT -->
+                    <div class="card-hover bg-gray-900/50 p-6 rounded-lg border border-gray-800 transition-all duration-300 fade-in flex flex-col" style="animation-delay: 0.8s;">
+                         <img src="image/usdt.jpeg" alt="شراء وبيع USDT" class="rounded-md mb-6 w-full h-48 object-cover">
+                        <h4 class="text-xl font-bold mb-3 hero-gradient-text">شراء وبيع USDT</h4>
+                        <p class="text-gray-400 flex-grow">نقدم أفضل الأسعار لبيع وشراء عملة USDT الرقمية بكل موثوقية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Gallery Section -->
+        <section id="offers" class="bg-gray-900/50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-3">أبرز عروضنا</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">اكتشف أفضل الأسعار لخدمات الشحن وبطاقات الهدايا المتنوعة.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                    <div class="fade-in" style="animation-delay: 0.1s;"><img src="image/pubg.jpeg" alt="شحن ببجي" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full h-full object-cover"></div>
+                    <div class="fade-in" style="animation-delay: 0.2s;"><img src="image/jawaker.jpeg" alt="شحن جواكر" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full h-full object-cover"></div>
+                    <div class="fade-in" style="animation-delay: 0.3s;"><img src="image/netflix.jpeg" alt="اشتراك نتفلكس" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full h-full object-cover"></div>
+                    <div class="fade-in" style="animation-delay: 0.4s;"><img src="image/shahid.jpeg" alt="اشتراك شاهد" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full h-full object-cover"></div>
+                    <div class="fade-in" style="animation-delay: 0.5s;"><img src="image/shein.jpeg" alt="بطاقات هدايا شي ان" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 fade-in">
+                    <img src="image/amoury.jpeg" alt="فريق Amoury Media Agency" class="rounded-lg shadow-lg w-full h-auto border-4 border-gray-800">
+                </div>
+                <div class="md:w-1/2 fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">فريقك نحو النجاح الرقمي</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">في Amoury Media Agency، نحن أكثر من مجرد مقدمي خدمات؛ نحن شركاؤك في النجاح. نجمع بين الخبرة التقنية والشغف بالإعلام الرقمي لنقدم حلولاً مبتكرة تحقق نتائج حقيقية.</p>
+                    <p class="text-gray-400 leading-relaxed">مهمتنا هي تمكينك من استغلال كامل إمكانيات العالم الرقمي بكل سهولة وثقة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-black py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-3">هل أنت مستعد للبدء؟</h3>
+                    <p class="text-gray-400">تواصل معنا الآن، ودعنا نساعدك في تحقيق أهدافك.</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-gray-900 p-8 rounded-lg border border-gray-800 shadow-lg fade-in" style="animation-delay: 0.2s;">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block font-medium mb-2 tiktok-cyan">الاسم</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-tiktok-pink text-white" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block font-medium mb-2 tiktok-cyan">البريد الإلكتروني أو رقم الهاتف</label>
+                            <input type="text" id="email" name="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-tiktok-pink text-white" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block font-medium mb-2 tiktok-cyan">رسالتك</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-tiktok-pink text-white" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-tiktok-cyan text-black font-bold py-3 px-8 rounded-full hover:bg-white transition duration-300 w-full transform hover:scale-105 shadow-lg shadow-cyan-500/30">إرسال</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Amoury Media Agency. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Close mobile menu on click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.style.animationPlayState = 'running';
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            fader.style.animationPlayState = 'paused';
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
