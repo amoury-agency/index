@@ -90,6 +90,126 @@
             </div>
         </section>
 
+        <style>
+  /* --- قسم الفيديو الإعلاني --- */
+  .promo-video-container {
+    width: 100%;
+    max-width: 900px; /* يمكنك تغيير العرض الأقصى حسب تصميم موقعك */
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .promo-video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+
+<div class="promo-video-container">
+  <video controls autoplay muted loop>
+    <source src="image/amoury.mp4" type="video/mp4">
+    متصفحك لا يدعم عرض الفيديوهات.
+  </video>
+  <style>
+  /* --- قسم أعمالنا --- */
+
+  .our-work-gallery {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .our-work-gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  .video-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .video-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .video-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .video-item iframe {
+    width: 100%;
+    height: 200px; /* ارتفاع مناسب للفيديو المضمن */
+    border: none;
+  }
+
+  .video-title {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #444;
+  }
+</style>
+
+<div class="our-work-gallery">
+  <h2>بعض من أعمالنا</h2>
+  <div class="video-grid">
+
+    <div class="video-item">
+      <video controls poster="path/to/video1-poster.jpg">
+        <source src="image/safar2.mp4" type="video/mp4">
+        تصميم فيديو لمكتب سفريات
+      </video>
+      <div class="video-title">
+       تصميم فيديو لمكتب سفريات
+      </div>
+    </div>
+
+    <div class="video-item">
+      <iframe src="image/safar.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-title">
+        تصميم فيديو لنقل طلبات من المطار
+      </div>
+    </div>
+    
+    <div class="video-item">
+      <video controls poster="path/to/video3-poster.jpg">
+        <source src="image/akkar.mp4" type="video/mp4">
+        تصميم فيديو لمحل ثياب في الشمال
+      </video>
+      <div class="video-title">
+        تصميم فيديو لمحل ثياب في الشمال
+      </div>
+    </div>
+    <div class="video-item">
+      <video controls poster="path/to/video3-poster.jpg">
+        <source src="image/sa7eb.mp4" type="video/mp4">
+         تصميم فيديو لسحب ارباح tiktok
+      </video>
+      <div class="video-title">
+         تصميم فيديو لسحب ارباح tiktok
+      </div>
+    </div>
+
+    </div>
+</div>
+</div>
         <!-- Services Section -->
         <section id="services" class="py-20">
             <div class="container mx-auto px-6">
